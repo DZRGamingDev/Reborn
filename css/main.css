@@ -1,0 +1,544 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1.2em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: #58595B;
+}
+
+#container {
+    position: relative;
+    padding:; 0;
+    padding-left: 14.25em;
+}
+
+.brand-color {
+    color: #FF6800;
+}
+
+#left-sidebar {
+    position: fixed;
+    background-color: #232222;
+    height: 100%;
+    width: 13em;
+}
+
+.menu-box {
+    position: relative;
+    margin-left: 2em;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    width: 100%;
+    height: 1.5em;
+    overflow: hidden;
+}
+
+.menu-box svg {
+    height: 100%;
+    width: auto;
+    fill: #F3F4F4;
+    stroke: none;
+    stroke-miterlimit: 10;
+}
+
+#left-sidebar nav {
+    position: relative;
+    /* top: -16px; */
+    width: 100%;
+}
+
+#left-sidebar nav hr {
+    margin-top: 1.8em;
+    border: 2px;
+    background-color: #00C1DE;
+}
+
+#left-sidebar nav ul {
+    list-style: none;
+}
+
+#left-sidebar nav a {
+    color: #F3F4F4;
+    text-decoration: none;
+}
+
+#left-sidebar ul li {
+    font-size: 1.3em;
+    line-height: 3em;
+}
+
+.flyout {
+    display: none;
+    margin-left: 13em;
+}
+
+header {
+    margin-top: 0;
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 5.625em;
+    margin-top: 0.5em;
+    overflow: hidden;
+}
+
+.logo svg {
+    stroke: none;
+    width: auto;
+    height: 100%;
+}
+
+.account-box {
+    height: 75px;
+    overflow: hidden;
+}
+
+.avatar-box {
+    width:75px;
+    height: 75px;
+    background-color: #232222;
+}
+
+.avatar-box svg {
+    width: auto;
+    height: 2.75em;
+    margin: 15% 32%;
+    padding: 0;
+}
+
+.login-button {
+    position: relative;
+    width: 180px;
+    padding: 1.25em 28%;
+    background-color: #FF6800;
+}
+
+.account-box {
+    position: relative;
+    display: inline-flex;
+}
+
+.account-box a {
+    text-decoration: none;
+    color: #F3F4F4;
+}
+
+.account-box span {
+    font-size: 1.35em;
+    display: block;
+}
+
+.live-feed {
+    position: relative;
+    /* top: 0em; */
+    display: flex;
+}
+
+.back-button {
+    z-index: 5;
+    display: inline-flex;
+    margin-right: auto;
+    margin-left: 0%;
+}
+
+.back-button svg {
+    /* margin-left: 12px; */
+    position:  absolute;
+    top: 150px;
+    left: 175px;
+    height: 10em;
+    width: auto;
+}
+
+.back-button .st0 {opacity:0.64;}
+.back-button .st1 {fill:#939598;} 
+
+.active-stream * {
+    display: inline-block;
+    position: relative;
+} 
+
+.active-stream {
+    width: 15%;
+    height: 2em;
+    color: #F3F4F4;
+    background-color: #F7323F;
+    position:  relative;
+    top: 0em;
+    margin: 0 auto;
+    padding: 0;
+    /* left: 0%; */
+}
+
+.active-stream svg {
+    margin-left: 23%;
+    margin-top: 0;
+    height: 1.4em;
+    width: auto;
+    top: -28px;
+}
+
+/* weird issues getting inline SVGs to fill correctly. Namespace collision is suspected */
+.active-stream svg .st0 {fill:#F3F4F4;}
+.active-stream svg .st1 {fill:#F7323F;}
+.active-stream svg .st2 {fill:#F3F4F4;}
+
+.active-stream p {
+    top: -61%;
+    margin-left: 4%;
+    font-size: 1.4em;
+}
+
+.stream-player {
+    position: relative; padding-bottom: 34%;
+    height: 0; width: 60%; margin: 0 20%
+}
+
+.stream-player iframe,
+.stream-player embed,
+.stream-player object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.stream-player a {
+    display: none !important;
+}
+
+.fwd-button {
+    position: relative;
+    z-index: 5;
+}
+
+.fwd-button svg {
+    position:  absolute;
+    top: 150px;
+    right:  175px;
+    height: 10em;
+    width: auto;
+    transform: rotate(180deg);
+}
+
+.fwd-button .st0 {opacity:0.64;}
+.fwd-button .st1 {fill:#939598;} 
+
+.content-slots {
+    display: flex;
+    background-color: #E6E7E8;
+    position: relative;
+    left: -1.46%;
+    width: 101.8%;
+    /* z-index: -5; */
+    top: 2em;
+}
+
+.content-slots section {
+    margin: 1em;
+}
+
+.content-slots article {
+    color: #FF6800;
+    background-color: #F3F4F4;
+    width: 85S%;
+    margin-bottom: 15px;
+}
+
+.content-slots h2 {
+
+    padding-top: 1em;
+    padding-left: 0.8em;
+}
+
+.content-slots hr {
+    position: relative;
+    width: 90%;
+    height: 4px;
+    color: #FF6800;
+    font-size: 0;
+    top: -13px;
+    left: 22px;
+    border-top: 3px solid #FF6800;
+}
+
+.content-slots article p {
+    color: #232222;
+    padding: 15px;
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after,
+    *:first-letter,
+    *:first-line {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
