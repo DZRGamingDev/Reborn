@@ -12,7 +12,7 @@
 
 html {
     color: #222;
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.4;
 }
 
@@ -103,83 +103,85 @@ body {
     background-color: #58595B;
 }
 
-#container {
-    position: relative;
-    padding:; 0;
-    padding-left: 14.25em;
-}
-
-.brand-color {
-    color: #FF6800;
-}
-
-#left-sidebar {
+nav {
     position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
     background-color: #232222;
-    height: 100%;
-    width: 13em;
+    width: 12em;
+    z-index: 1000;
 }
 
-.menu-box {
-    position: relative;
-    margin-left: 2em;
-    margin-top: 2em;
-    margin-bottom: 3em;
-    width: 100%;
-    height: 1.5em;
-    overflow: hidden;
+nav ul {    
+    margin-top: 130px;
+    padding-left: 0;
+    list-style-type: none;
 }
 
-.menu-box svg {
-    height: 100%;
-    width: auto;
-    fill: #F3F4F4;
-    stroke: none;
-    stroke-miterlimit: 10;
+nav ul li:hover {
+    background-color: #FF6800;
 }
 
-#left-sidebar nav {
-    position: relative;
-    /* top: -16px; */
+nav li {
+    padding: 0.5em 1.4em;
     width: 100%;
 }
 
-#left-sidebar nav hr {
-    margin-top: 1.8em;
-    border: 2px;
-    background-color: #00C1DE;
-}
-
-#left-sidebar nav ul {
-    list-style: none;
-}
-
-#left-sidebar nav a {
+nav a,
+nav a:visited {
     color: #F3F4F4;
+    padding-top: unset;
+    text-transform: uppercase;
     text-decoration: none;
 }
 
-#left-sidebar ul li {
-    font-size: 1.3em;
-    line-height: 3em;
-}
-
-.flyout {
-    display: none;
-    margin-left: 13em;
-}
-
 header {
-    margin-top: 0;
-    display:flex;
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 85px;
+    background-color: #58595B;
+}
+
+.menu-box {
+    position: absolute;
+    display: inline-flex;
+    height: 85px;
+    width: 12em;
+    margin: 0;
+    padding: 0;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: #00C1DE;
+    background-color: #232222;
+}
+
+.menu-box svg {
+    margin: auto;
+    height: auto;
+    width: 30%;
+}
+
+.menu-box svg .st0 {
+    fill: #F4F5F5;
 }
 
 .logo {
-    height: 5.625em;
+    position: absolute;
+    display: inline-flex;
+    top: 0;
+    left: 13%;
+    height: 70px;
     margin-top: 0.5em;
     overflow: hidden;
 }
+
+.logo svg .st0 {fill: #F3F4F4;}
+.logo svg .st1 {fill: #FF6800;}
 
 .logo svg {
     stroke: none;
@@ -187,34 +189,35 @@ header {
     height: 100%;
 }
 
-.account-box {
-    height: 75px;
-    overflow: hidden;
-}
-
 .avatar-box {
-    width:75px;
-    height: 75px;
+    position: absolute;
+    display: inline-flex;
+    width: 85px;
+    height: 85px;
+    top: 0px;
+    right: 180px;
     background-color: #232222;
 }
 
 .avatar-box svg {
     width: auto;
-    height: 2.75em;
-    margin: 15% 32%;
+    height: 60px;
+    margin: auto;
     padding: 0;
 }
 
-.login-button {
-    position: relative;
-    width: 180px;
-    padding: 1.25em 28%;
-    background-color: #FF6800;
+.avatar-box svg .st0 {
+    fill: #F4F5F5;
 }
 
-.account-box {
-    position: relative;
-    display: inline-flex;
+.login-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 85px;
+    width: 180px;
+    padding: 1.25em;
+    background-color: #FF6800;
 }
 
 .account-box a {
@@ -227,103 +230,12 @@ header {
     display: block;
 }
 
-.live-feed {
-    position: relative;
-    /* top: 0em; */
-    display: flex;
-}
-
-.back-button {
-    z-index: 5;
-    display: inline-flex;
-    margin-right: auto;
-    margin-left: 0%;
-}
-
-.back-button svg {
-    /* margin-left: 12px; */
-    position:  absolute;
-    top: 150px;
-    left: 175px;
-    height: 10em;
-    width: auto;
-}
-
-.back-button .st0 {opacity:0.64;}
-.back-button .st1 {fill:#939598;} 
-
-.active-stream * {
-    display: inline-block;
-    position: relative;
-} 
-
-.active-stream {
-    width: 15%;
-    height: 2em;
-    color: #F3F4F4;
-    background-color: #F7323F;
-    position:  relative;
-    top: 0em;
-    margin: 0 auto;
-    padding: 0;
-    /* left: 0%; */
-}
-
-.active-stream svg {
-    margin-left: 23%;
-    margin-top: 0;
-    height: 1.4em;
-    width: auto;
-    top: -28px;
-}
-
-/* weird issues getting inline SVGs to fill correctly. Namespace collision is suspected */
-.active-stream svg .st0 {fill:#F3F4F4;}
-.active-stream svg .st1 {fill:#F7323F;}
-.active-stream svg .st2 {fill:#F3F4F4;}
-
-.active-stream p {
-    top: -61%;
-    margin-left: 4%;
-    font-size: 1.4em;
-}
-
-.stream-player {
-    position: relative; padding-bottom: 34%;
-    height: 0; width: 60%; margin: 0 20%
-}
-
-.stream-player iframe,
-.stream-player embed,
-.stream-player object {
+#container {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    right:0;
+    margin-top: 200px;
+    width:88.5%;
 }
-
-.stream-player a {
-    display: none !important;
-}
-
-.fwd-button {
-    position: relative;
-    z-index: 5;
-}
-
-.fwd-button svg {
-    position:  absolute;
-    top: 150px;
-    right:  175px;
-    height: 10em;
-    width: auto;
-    transform: rotate(180deg);
-}
-
-.fwd-button .st0 {opacity:0.64;}
-.fwd-button .st1 {fill:#939598;} 
 
 .content-slots {
     display: flex;
@@ -331,19 +243,30 @@ header {
     position: relative;
     left: -1.46%;
     width: 101.8%;
-    /* z-index: -5; */
-    top: 2em;
+    top: 4em;
 }
 
 .content-slots section {
     margin: 1em;
 }
 
+#pop-news article:nth-of-type(1),
+#latest article:nth-of-type(1),
+#recent-posts blockquote:nth-of-type(1) {
+    top: -81px;
+    position:  relative;
+}
+
+.content-slots h1 {
+    left: 1em;
+    position: relative;
+}
+
 .content-slots article {
     color: #FF6800;
     background-color: #F3F4F4;
-    width: 85S%;
-    margin-bottom: 15px;
+    width: 85%;
+    margin: 0 15 0 0px;
 }
 
 .content-slots h2 {
@@ -368,6 +291,35 @@ header {
     padding: 15px;
 }
 
+#pop-news .section-label {
+    background-color: #232222;
+    color: #FFCE00;
+    width: 327px;
+    top: -61px;
+    position: relative;
+}
+
+#latest .section-label,
+#recent-posts .section-label {
+    background-color: #FF6800;
+    color: #F3F4F4;
+    width: 285px;
+    top: -60px;
+    position: relative;
+}
+
+.link-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon-circle {
+    width: 150px;
+    height: 150ps;
+    border-radius: 75px;
+    background-color: #232222;
+}
 
 
 
