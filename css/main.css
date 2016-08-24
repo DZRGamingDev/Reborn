@@ -99,17 +99,14 @@ textarea {
   box-sizing: border-box;
 }
 
-body {
-    background-color: #58595B;
-}
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     background-color: #232222;
-    width: 12em;
+    min-width: 12em;
+    max-width: 13%;
     z-index: 1000;
 }
 
@@ -160,31 +157,24 @@ header {
     background-color: #232222;
 }
 
-.menu-box svg {
+.menu-box img {
     margin: auto;
     height: auto;
     width: 30%;
-}
-
-.menu-box svg .st0 {
-    fill: #F4F5F5;
 }
 
 .logo {
     position: absolute;
     display: inline-flex;
     top: 0;
-    left: 13%;
+    left: 15%;
     height: 70px;
     margin-top: 0.5em;
     overflow: hidden;
 }
 
-.logo svg .st0 {fill: #F3F4F4;}
-.logo svg .st1 {fill: #FF6800;}
 
-.logo svg {
-    stroke: none;
+.logo img {
     width: auto;
     height: 100%;
 }
@@ -199,15 +189,11 @@ header {
     background-color: #232222;
 }
 
-.avatar-box svg {
+.avatar-box img {
     width: auto;
     height: 60px;
     margin: auto;
     padding: 0;
-}
-
-.avatar-box svg .st0 {
-    fill: #F4F5F5;
 }
 
 .login-button {
@@ -232,9 +218,20 @@ header {
 
 #container {
     position: absolute;
-    right:0;
-    margin-top: 200px;
-    width:88.5%;
+    right: 0;
+    margin-top: 85px;
+    width: 88.5%;
+    left: 12em;
+}
+}
+
+/* ==========================================================================
+   Index Specific Styles
+   ========================================================================== */
+
+
+#landing-page {
+    background-color: #58595B;
 }
 
 .content-slots {
@@ -321,8 +318,57 @@ header {
     background-color: #232222;
 }
 
+/* ==========================================================================
+   Hub specific styles
+   ========================================================================== */
 
+#the-hub {background-color: #FFFFFF;}
 
+.hub-bar {
+    display: flex;
+
+}
+
+#orange-stripe svg .st0 {fill:#FF6800;}
+
+#orange-stripe svg {
+    height: 100%;
+    width: 100%;
+}
+
+#orange-stripe {
+    height: 4.5625em;
+    width: auto;
+}
+
+.hub-bar h1 {
+    text-transform: uppercase;
+    padding-left: 0.6em;
+}
+
+.sub-nav ul {
+    list-style-type: none;
+}
+
+.sub-nav ul li {
+    background-color: #FF6800;
+    height: 2.5em;
+    width: 12em;
+    top: 1.4em;
+    position: relative;
+    padding: 0.3em 1.4em;
+    display: inline;
+}
+
+.sub-nav ul li:active {
+    top:0.6em;
+    height: 4em;
+}
+
+.sub-nav ul li a img {
+    height: 1.2em;
+    width: auto;
+}
 
 
 /* ==========================================================================
