@@ -97,7 +97,6 @@ textarea {
 
 body {
     font-family: 'Open Sans', sans-serif;
-    overflow-x: hidden;
 }
 
 @font-face {
@@ -225,7 +224,6 @@ header {
 }
 
 .login-button {
-    font-family: 'bebasregular', Helvetica, Verdana, sans-serif;
     letter-spacing: 0.0625em;
     position: relative;
     top: 0;
@@ -276,31 +274,43 @@ header {
     top: 4em;
 }
 
-.content-slots section {
+.content-slots a,
+.content-slots a:hover,
+.content-slots a:visited {
+    text-decoration: none;
+    color: #FF6800;
+}
+
+.content-slots section,
+#pop-news {
+    width: 50%;
     margin: 1em;
 }
 
-#pop-news article:nth-of-type(1),
+
+
+#pop-news blockquote:nth-of-type(1),
 #latest article:nth-of-type(1),
 #recent-posts article:nth-of-type(1) {
     top: -79px;
     position:  relative;
 }
 
+#pop-news blockquote
+
 .content-slots h1 {
     left: 1em;
     position: relative;
     display: inline-block;
     line-height: 0.8;
-    /* padding: 11px 15px 8px 8px; */
-    /* margin: 0; */
 }
 
 .content-slots .section-label {
     padding-top: .6em;
 }
 
-.content-slots article {
+.content-slots article,
+#pop-news blockquote {
     color: #FF6800;
     background-color: #F3F4F4;
     width: 85%;
@@ -331,24 +341,24 @@ header {
 #pop-news .section-label {
     background-color: #232222;
     color: #FFCE00;
-    width: 327px;
+    width: 49%;
     top: -61px;
     position: relative;
-    /* padding-top: .6em; */
 }
 
 #latest .section-label,
 #recent-posts .section-label {
     background-color: #FF6800;
     color: #F3F4F4;
-    width: 285px;
+    width: 61%;
     top: -60px;
     position: relative;
 }
 
-#recent-posts article {
-    margin-right: 0;
-    margin-top: 2px;
+.twitter-timeline-body {
+    position: relative;
+    
+    top: -58px;
 }
 
 .twitter-feed {
@@ -466,7 +476,7 @@ header {
     background-color: #E6E7E8;
     position: relative;
     top: 0.7em;
-    height: 25em;
+    height: 24em;
     left: 0;
     border-bottom: 1px solid #FF6800;
     border-top: 1px solid #FF6800;
@@ -549,8 +559,6 @@ header {
     position: relative;
     width: 14.875em;
     height: 3.5em;
-    /* left: 2em; */
-    /* top: -5em; */
 }
 
 .online-tag .indicator {
@@ -629,10 +637,126 @@ header {
     left: 40.401%;
     width: 50.2%;
     height: 21.4em;
-    background-color: #F3F4F4;
 }
 
+.item-label {
+  background-color: #FF6800;
+  color: #F3F4F4;
+  width: 60%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+.item-label a,
+.item-label a:visited {
+  color: #f3f3f5;
+  text-decoration: none;
+}
+.item-label a:hover {
+  text-decoration: underline;
+}
+.item-label h2 {
+  margin: 0 auto;
+  padding: .2em .5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+  background: #D1D3D4;
+}
+
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .item-label {
+    width: 100%;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    border: 1px solid #ccc;
+  }
+
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td:before {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before {
+    content: "Player";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Game";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Members";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Difficulty";
+  }
+
+  td:nth-of-type(5):before {
+    content: "Activity";
+  }
+
+  td:nth-of-type(6):before {
+    content: "View";
+  }
+  td:nth-of-type(7):before {
+    content: "Delete";
+  }
+}
+
+
 .friends-list {
+    display: none;
     position: relative;
     top: .5em;
     left: 0;
@@ -725,10 +849,10 @@ header {
 .chat-stream {
     background-color: #E6E7E8;
     position: relative;
-    width: 72%;
+    width: 97%;
     height: 53em;
-    top: -20em;
-    right: -465px;
+    top: 2.5em;
+    right: -1.6875em;
 }
 
 /* ==========================================================================
@@ -771,6 +895,19 @@ header {
 #bio .leftside {
     padding-left: 1.5em;
 }
+
+
+/* ==========================================================================
+   Community Styles
+   ========================================================================== */
+
+#community #container {
+    position: relative;
+    left: 11.9375em;
+    top: 6.5em;
+    width: 90%;
+}
+
 
 
 /* ==========================================================================
