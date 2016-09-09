@@ -5,21 +5,17 @@ DZR Gaming's [Project Reborn](https://www/dzrgaming.com/) is an effort by member
 
 This repository contains the code created by the Reborn team as they develop the platform.
 
-## Table Of Contents
-* 
-
 ## Features
 * Dcoumentation
-* Sass
-* SVG
-* Gulp Tasks
+* Sass (coming soon)
+* SVG 
+* Gulp Tasks (xoming soon)
 
-## Installation
-1. Install Node
+## Installation 
+1. Install Node (skip for now)
 2. Clone respository
-3. npm install
-4. gulp build
-5. 
+3. npm install (skip for now)
+4. gulp build (skip for now)
 
 ## Usage
 
